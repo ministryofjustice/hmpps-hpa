@@ -1,0 +1,14 @@
+generic-service:
+  replicaCount: 2
+
+  ingress:
+    host: hpa-preprod.prison.service.justice.gov.uk
+
+  env:
+    INGRESS_URL: "https://hpa-preprod.prison.service.justice.gov.uk"
+    HMPPS_AUTH_URL: "https://sign-in-preprod.hmpps.service.justice.gov.uk/auth"
+    TOKEN_VERIFICATION_API_URL: "https://token-verification-api-preprod.prison.service.justice.gov.uk"
+    ENVIRONMENT_NAME: PRE-PRODUCTION
+
+generic-prometheus-alerts:
+  alertSeverity: hmpps_tech_non_prod

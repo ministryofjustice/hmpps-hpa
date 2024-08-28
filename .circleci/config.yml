@@ -52,7 +52,6 @@ jobs:
           name: unit tests
           command: |
             npm run test -- --exit
-            npm run snyk-protect
       - store_test_results:
           path: test_results
       - store_artifacts:

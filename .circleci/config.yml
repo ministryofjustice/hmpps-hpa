@@ -26,7 +26,7 @@ jobs:
       - checkout
       - run:
           name: Update npm
-          command: 'sudo npm install -g npm@6.14.8'
+          command: 'sudo npm install -g npm@latest-7'
       - restore_cache:
           key: dependency-cache-{{ checksum "package-lock.json" }}
       - run:
@@ -162,10 +162,6 @@ workflows:
               only:
                 - main
     jobs:
-      - hmpps/npm_outdated:
-          slack_channel: << pipeline.parameters.alerts-slack-channel >>
-          context:
-            - hmpps-common-vars
       - hmpps/npm_security_audit:
           slack_channel: << pipeline.parameters.alerts-slack-channel >>
           context:

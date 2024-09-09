@@ -10,8 +10,8 @@
   "scripts": {
     "clean": "rm -rf public govuk_modules .port.tmp *.log build uploads test-results.xml",
     "build": "npm run clean && ./build.sh && webpack",
-    "start": "npm run build && node .",
-    "start:dev": "nodemon",
+    "start": "node .",
+    "start:dev": "npm run build && nodemon",
     "test": "NODE_ENV=test mocha --recursive test --exit",
     "lint": "eslint . --cache --max-warnings 0",
     "record-build-info": "node ./bin/record-build-info",

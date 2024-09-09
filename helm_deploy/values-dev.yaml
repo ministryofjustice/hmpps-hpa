@@ -6,7 +6,10 @@ generic-service:
 
   env:
     INGRESS_URL: "https://hpa-dev.prison.service.justice.gov.uk"
+    CALLBACK_URL: "https://hpa-dev.prison.service.justice.gov.uk/authentication"
     HMPPS_AUTH_URL: "https://sign-in-dev.hmpps.service.justice.gov.uk/auth"
+    TOKEN_HOST: "https://sign-in-dev.hmpps.service.justice.gov.uk/auth"
+    MANAGE_USERS_API_HOST: "https://manage-users-api-dev.hmpps.service.justice.gov.uk"
     TOKEN_VERIFICATION_API_URL: "https://token-verification-api-dev.prison.service.justice.gov.uk"
     ENVIRONMENT_NAME: DEV
 

@@ -19,3 +19,6 @@ build-info.json
 
 # Optional eslint cache
 .eslintcache
+
+# dotenv environment variables file
+.env*

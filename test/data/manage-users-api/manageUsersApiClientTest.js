@@ -32,8 +32,8 @@ describe('getUserDetails', () => {
                   email: 'abc@def.com',
                   firstName: 'Joe',
                   lastName: 'Bloggs',
-                  logoutLink: 'http://localhost:8080/auth/sign-out',
-                  profileLink: 'http://localhost:8080/auth/account-details',
+                  logoutLink: 'http://localhost:9090/auth/sign-out',
+                  profileLink: 'http://localhost:9090/auth/account-details',
                   sessionTag: '00000000-0000-0000-0000-000000000000',
                   token: 'token123'
               })

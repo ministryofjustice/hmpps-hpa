@@ -83,6 +83,7 @@ workflows:
             branches:
               only:
                 - main
+                - HAAR-1918-build-docker
       - hmpps/deploy_env:
           name: deploy_dev
           env: "dev"

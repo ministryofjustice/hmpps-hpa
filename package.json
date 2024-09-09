@@ -19,14 +19,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git@github.com:noms-digital-studio/iis.git"
+    "url": "git@github.com:ministryofjustice/hmpps-hpa.git"
   },
   "author": "NOMS Digital Studio",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/noms-digital-studio/iis/issues"
+    "url": "https://github.com/ministryofjustice/hmpps-hpa/issues"
   },
-  "homepage": "https://github.com/noms-digital-studio/iis#readme",
+  "homepage": "https://github.com/ministryofjustice/hmpps-hpa#readme",
   "dependencies": {
     "agentkeepalive": "^4.5.0",
     "applicationinsights": "^2.7.3",

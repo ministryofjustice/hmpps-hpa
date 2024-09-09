@@ -27,5 +27,5 @@ if (config.healthcheckInterval) {
 }
 
 app.listen(app.get('port'), function() {
-  logger.info('IIS server listening on port ' + app.get('port'));
+  logger.info('HPA server listening on port ' + app.get('port'));
 });

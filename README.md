@@ -1,7 +1,7 @@
 # Historical Prisoner Application UI.
 
-[![CircleCI](https://circleci.com/gh/noms-digital-studio/iis/tree/master.svg?style=svg)](https://circleci.com/gh/noms-digital-studio/iis/tree/master)
-[![Known Vulnerabilities](https://snyk.io/test/github/noms-digital-studio/iis/badge.svg)](https://snyk.io/test/github/noms-digital-studio/iis)
+[![CircleCI](https://circleci.com/gh/ministryofjustice/hmpps-hpa/tree/master.svg?style=svg)](https://circleci.com/gh/ministryofjustice/hmpps-hpa/tree/master)
+[![Known Vulnerabilities](https://snyk.io/test/github/ministryofjustice/hmpps-hpa/badge.svg)](https://snyk.io/test/github/ministryofjustice/hmpps-hpa)
 
 # Get Started
 

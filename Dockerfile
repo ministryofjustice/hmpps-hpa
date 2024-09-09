@@ -38,7 +38,7 @@ ARG GIT_REF
 ARG GIT_BRANCH
 
 COPY package*.json ./
-RUN  npm ci --no-audit
+
 ENV NODE_ENV='production'
 
 COPY . .

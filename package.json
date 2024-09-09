@@ -4,8 +4,8 @@
   "description": "Historical Prisoner Application",
   "main": "server.js",
   "engines": {
-    "node": "^14",
-    "npm": "^7"
+    "node": "^20",
+    "npm": "^10"
   },
   "scripts": {
     "clean": "rm -rf public govuk_modules .port.tmp *.log build uploads test-results.xml",

@@ -1,3 +1,4 @@
+
 FROM node:14.21.3-bullseye-slim as base
 
 ARG BUILD_NUMBER
@@ -37,7 +38,7 @@ ARG GIT_REF
 ARG GIT_BRANCH
 
 COPY package*.json ./
-RUN #CYPRESS_INSTALL_BINARY=0 npm ci --no-audit
+RUN  npm ci --no-audit
 ENV NODE_ENV='production'
 
 COPY . .
@@ -51,10 +52,32 @@ FROM base
 COPY --from=build --chown=appuser:appgroup \
         /app/package.json \
         /app/package-lock.json \
+        /app/server.js \
+        /app/azure-appinsights.js \
+        /app/log.js \
         ./
 
-#COPY --from=build --chown=appuser:appgroup \
-#        /app/dist ./dist
+COPY --from=build --chown=appuser:appgroup \
+        /app/public ./public
+
+COPY --from=build --chown=appuser:appgroup \
+        /app/govuk_modules ./govuk_modules
+
+COPY --from=build --chown=appuser:appgroup \
+        /app/controllers ./controllers
+COPY --from=build --chown=appuser:appgroup \
+        /app/data ./data
+COPY --from=build --chown=appuser:appgroup \
+        /app/routes ./routes
+
+COPY --from=build --chown=appuser:appgroup \
+        /app/server ./server
+
+COPY --from=build --chown=appuser:appgroup \
+        /app/middleware ./middleware
+
+COPY --from=build --chown=appuser:appgroup \
+        /app/views ./views
 
 COPY --from=build --chown=appuser:appgroup \
         /app/node_modules ./node_modules

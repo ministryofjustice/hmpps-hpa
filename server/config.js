@@ -35,7 +35,7 @@ module.exports = {
   }),
 
   sso: {
-    url: get('TOKEN_HOST', 'http://localhost:8080/auth'),
+    url: get('TOKEN_HOST', 'http://localhost:9090/auth'),
     clientId: get('CLIENT_ID', 'hpa-client'),
     clientSecret: get('CLIENT_SECRET', 'clientsecret'),
     authorizePath: get('AUTHORIZE_PATH', '/oauth/authorize'),

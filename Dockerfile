@@ -59,15 +59,29 @@ COPY --from=build --chown=appuser:appgroup \
         ./
 
 COPY --from=build --chown=appuser:appgroup \
-        /app/public ./public
+        /app/assets ./assets
+
+COPY --from=build --chown=appuser:appgroup \
+        /app/bin ./bin
+
+COPY --from=build --chown=appuser:appgroup \
+        /app/controllers ./controllers
+
+COPY --from=build --chown=appuser:appgroup \
+        /app/data ./data
 
 COPY --from=build --chown=appuser:appgroup \
         /app/govuk_modules ./govuk_modules
 
 COPY --from=build --chown=appuser:appgroup \
-        /app/controllers ./controllers
+        /app/middleware ./middleware
+
 COPY --from=build --chown=appuser:appgroup \
-        /app/data ./data
+        /app/node_modules ./node_modules
+
+COPY --from=build --chown=appuser:appgroup \
+        /app/public ./public
+
 COPY --from=build --chown=appuser:appgroup \
         /app/routes ./routes
 
@@ -75,13 +89,7 @@ COPY --from=build --chown=appuser:appgroup \
         /app/server ./server
 
 COPY --from=build --chown=appuser:appgroup \
-        /app/middleware ./middleware
-
-COPY --from=build --chown=appuser:appgroup \
         /app/views ./views
-
-COPY --from=build --chown=appuser:appgroup \
-        /app/node_modules ./node_modules
 
 EXPOSE 3000
 ENV NODE_ENV='production'

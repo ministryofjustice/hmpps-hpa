@@ -40,13 +40,13 @@ generic-service:
     hmpps-hpa:
       CLIENT_ID: "CLIENT_ID"
       CLIENT_SECRET: "CLIENT_SECRET"
-      APPINSIGHTS_INSTRUMENTATIONKEY: "APPINSIGHTS_INSTRUMENTATIONKEY"
+#      APPINSIGHTS_INSTRUMENTATIONKEY: "APPINSIGHTS_INSTRUMENTATIONKEY"
       SESSION_SECRET: "SESSION_SECRET"
-      dps-rds-instance-output:
-        DB_NAME: "DB_NAME"
-        DB_SERVER: "DB_SERVER"
-        DB_USER: "DB_USER"
-        DB_PASS: "DB_PASS"
+    dps-rds-instance-output:
+      DB_NAME: "DB_NAME"
+      DB_SERVER: "rds_instance_address"
+      DB_USER: "DB_USER"
+      DB_PASS: "DB_PASS"
 
   allowlist:
     groups:

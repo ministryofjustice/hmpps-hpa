@@ -41,10 +41,12 @@ generic-service:
       CLIENT_ID: "CLIENT_ID"
       CLIENT_SECRET: "CLIENT_SECRET"
       APPINSIGHTS_INSTRUMENTATIONKEY: "APPINSIGHTS_INSTRUMENTATIONKEY"
-#    elasticache-redis:
-#      REDIS_HOST: "primary_endpoint_address"
-#      REDIS_AUTH_TOKEN: "auth_token"
-
+      SESSION_SECRET: "SESSION_SECRET"
+      dps-rds-instance-output:
+        DB_NAME: "DB_NAME"
+        DB_SERVER: "DB_SERVER"
+        DB_USER: "DB_USER"
+        DB_PASS: "DB_PASS"
 
   allowlist:
     groups:

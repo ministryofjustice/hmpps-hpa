@@ -29,7 +29,7 @@
   "homepage": "https://github.com/ministryofjustice/hmpps-hpa#readme",
   "dependencies": {
     "agentkeepalive": "^4.5.0",
-    "applicationinsights": "^2.7.3",
+    "applicationinsights": "^2.9.5",
     "bcryptjs": "^2.4.3",
     "body-parser": "^1.19.2",
     "case": "^1.6.3",

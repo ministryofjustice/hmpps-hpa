@@ -3,6 +3,7 @@ if (process.env.APPINSIGHTS_INSTRUMENTATIONKEY) {
   appInsights.setup()
       .setAutoCollectExceptions(false) // logger handles these
       .start();
+  appInsights.defaultClient.context.tags[appInsights.defaultClient.context.keys.cloudRole] = "hmpps-hpa";
   module.exports = appInsights;
 } else {
   module.exports = null;

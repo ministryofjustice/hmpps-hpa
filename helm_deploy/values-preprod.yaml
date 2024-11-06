@@ -6,9 +6,12 @@ generic-service:
 
   env:
     INGRESS_URL: "https://hpa-preprod.prison.service.justice.gov.uk"
+    CALLBACK_URL: "https://hpa-preprod.prison.service.justice.gov.uk/authentication"
     HMPPS_AUTH_URL: "https://sign-in-preprod.hmpps.service.justice.gov.uk/auth"
+    TOKEN_HOST: "https://sign-in-preprod.hmpps.service.justice.gov.uk/auth"
+    MANAGE_USERS_API_HOST: "https://manage-users-api-preprod.hmpps.service.justice.gov.uk"
     TOKEN_VERIFICATION_API_URL: "https://token-verification-api-preprod.prison.service.justice.gov.uk"
-    ENVIRONMENT_NAME: PRE-PRODUCTION
+    ENVIRONMENT_NAME: PRE-PROD
 
 generic-prometheus-alerts:
-  alertSeverity: hmpps_tech_non_prod
+  alertSeverity: syscon-nonprod

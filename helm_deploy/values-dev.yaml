@@ -14,4 +14,4 @@ generic-service:
     ENVIRONMENT_NAME: DEV
 
 generic-prometheus-alerts:
-  alertSeverity: hmpps_tech_non_prod
+  alertSeverity: syscon-nonprod

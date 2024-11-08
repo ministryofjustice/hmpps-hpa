@@ -9,10 +9,6 @@ parameters:
     type: string
     default: hmpps_tech_alerts_security
 
-  releases-slack-channel:
-    type: string
-    default: dps-releases
-
   node-version:
     type: string
     default: 14.17-browsers
@@ -113,23 +109,22 @@ workflows:
           requires:
             - request-preprod-approval
           helm_timeout: 5m
-  #      - request-prod-approval:
-  #          type: approval
-  #          requires:
-  #            - deploy_preprod
-  #      - hmpps/deploy_env:
-  #          name: deploy_prod
-  #          env: "prod"
-  #          jira_update: true
-  #          jira_env_type: production
-  #          slack_notification: true
-  #          slack_channel_name: << pipeline.parameters.releases-slack-channel >>
-  #          context:
-  #            - hmpps-common-vars
-  #            - hmpps-hpa-prod
-  #          requires:
-  #            - request-prod-approval
-  #          helm_timeout: 5m
+      - request-prod-approval:
+          type: approval
+          requires:
+            - deploy_preprod
+      - hmpps/deploy_env:
+          name: deploy_prod
+          env: "prod"
+          jira_update: true
+          jira_env_type: production
+          slack_notification: true
+          context:
+            - hmpps-common-vars
+            - hmpps-historical-prisoner-prod
+          requires:
+            - request-prod-approval
+          helm_timeout: 5m
 
   security:
     triggers:

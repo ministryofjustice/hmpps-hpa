@@ -12,7 +12,15 @@ generic-service:
     MANAGE_USERS_API_HOST: "https://manage-users-api-preprod.hmpps.service.justice.gov.uk"
     TOKEN_VERIFICATION_API_URL: "https://token-verification-api-preprod.prison.service.justice.gov.uk"
     ENVIRONMENT_NAME: PRE-PROD
-    DB_NAME: "iis-stage"
+    DB_NAME: "iis-preprod"
+
+  scheduledDowntime:
+    enabled: true
+    startup: '50 6 * * 1-5' # Start at 6.50am UTC Monday-Friday
+    shutdown: '50 20 * * 1-5' # Stop at 8.50pm UTC Monday-Friday
 
 generic-prometheus-alerts:
   alertSeverity: syscon-nonprod
+  businessHoursOnly: true
+  rdsAlertsDatabases:
+    cloud-platform-4bdb6c77965e5153: "historical prisoner"

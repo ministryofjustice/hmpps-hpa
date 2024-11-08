@@ -9,7 +9,7 @@ generic-service:
     TOKEN_HOST: "https://sign-in.hmpps.service.justice.gov.uk/auth"
     MANAGE_USERS_API_HOST: "https://manage-users-api.hmpps.service.justice.gov.uk"
     TOKEN_VERIFICATION_API_URL: "https://token-verification-api.prison.service.justice.gov.uk"
-    DB_NAME: "iis-stage"
+    DB_NAME: "iis-prod"
 
   allowlist:
     groups:
@@ -18,3 +18,5 @@ generic-service:
 
 generic-prometheus-alerts:
   alertSeverity: syscon
+  rdsAlertsDatabases:
+    cloud-platform-7cf4b6d00ff4674a: "historical prisoner"

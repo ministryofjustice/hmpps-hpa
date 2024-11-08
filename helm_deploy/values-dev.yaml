@@ -14,5 +14,13 @@ generic-service:
     ENVIRONMENT_NAME: DEV
     DB_NAME: "iis-dev"
 
+  scheduledDowntime:
+    enabled: true
+    startup: '22 6 * * 1-5' # Start at 6.22am UTC Monday-Friday
+    shutdown: '52 21 * * 1-5' # Stop at 9.52pm UTC Monday-Friday
+
 generic-prometheus-alerts:
   alertSeverity: syscon-nonprod
+  businessHoursOnly: true
+  rdsAlertsDatabases:
+    cloud-platform-ddb6945a92970e78: "historical prisoner"

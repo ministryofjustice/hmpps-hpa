@@ -8,5 +8,10 @@ generic-service:
     TOKEN_VERIFICATION_API_URL: "https://token-verification-api.prison.service.justice.gov.uk"
     DB_NAME: "iis-prod"
 
+  allowlist:
+    groups:
+      - internal
+      - prisons
+
 generic-prometheus-alerts:
   alertSeverity: hmpps_tech

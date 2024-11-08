@@ -6,6 +6,7 @@ generic-service:
     INGRESS_URL: "https://hpa.prison.service.justice.gov.uk"
     HMPPS_AUTH_URL: "https://sign-in.hmpps.service.justice.gov.uk/auth"
     TOKEN_VERIFICATION_API_URL: "https://token-verification-api.prison.service.justice.gov.uk"
+    DB_NAME: "iis-prod"
 
 generic-prometheus-alerts:
   alertSeverity: hmpps_tech

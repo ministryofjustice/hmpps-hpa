@@ -39,7 +39,7 @@
     "csurf": "^1.11.0",
     "eslint": "^8.10.0",
     "eslint-config-google": "^0.14.0",
-    "express": "^4.14.0",
+    "express": "^4.19.2",
     "express-request-id": "^1.4.0",
     "express-winston": "^2.3.0",
     "govuk_frontend_toolkit": "^9.0.1",
